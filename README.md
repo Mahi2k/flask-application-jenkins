@@ -47,17 +47,15 @@ A repository to demonstrate Flask application deployment using Jenkins in EC2
     <img width="848" alt="image" src="https://github.com/Mahi2k/flask-application-jenkins/assets/10346368/4f735012-91e2-4bb8-a754-d5f6352b9148">
 
 21. Add nginx configuration as below to reverse proxy to the port flask app is running
-    `location / {
-              proxy_pass http://localhost:5000;
-              proxy_http_version 1.1;
-              proxy_set_header Upgrade $http_upgrade;
-              proxy_set_header Connection 'upgrade';
-              proxy_set_header Host $host;
-              proxy_cache_bypass $http_upgrade;
+    
+  `location / {
+    proxy_pass http://localhost:5000;
+    proxy_http_version 1.1;
+    proxy_set_header Upgrade $http_upgrade;
+    proxy_set_header Connection 'upgrade';
+    proxy_set_header Host $host;
+    proxy_cache_bypass $http_upgrade;
+  }`
 
-              # First attempt to serve request as a file, then
-              # as directory, then fall back to displaying a 404.
-        }`
-
-22. Reload nginx
+23. Reload nginx
     `sudo systemctl reload nginx`
