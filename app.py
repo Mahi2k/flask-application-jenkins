@@ -7,7 +7,7 @@ app = Flask(__name__)
 
 @app.route('/', methods=['GET'])
 def hello():
-    return 'Hello World! From Flask Application.'
+    return 'Hello World! From Flask Application. Its group number one!'
 
 
 @app.route('/aboutus',methods=['GET'])
