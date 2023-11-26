@@ -61,6 +61,7 @@ A repository to demonstrate Flask application deployment using Jenkins in EC2
     `sudo systemctl reload nginx`
 
 24. Setup Alert System using default email
+
     `Add Post-Build Action:
     Scroll down to the 'Post-build Actions' section.
     Click on Add post-build action.
@@ -68,6 +69,6 @@ A repository to demonstrate Flask application deployment using Jenkins in EC2
     Set Email Recipients:
     Configure recipients for the email notifications`
 
-25. Define Email Content:
+26. Define Email Content:
     `Define the subject and email body.
     Save the job and hit apply.`
